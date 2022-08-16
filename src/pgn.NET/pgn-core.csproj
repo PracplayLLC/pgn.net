@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\pgn.Data\pgndata-core.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+        <Compile Remove="Properties/*"/>
+  </ItemGroup>
+</Project>
