@@ -51,7 +51,7 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" Condition="Exists('$(FSharpTargetsPath)')" />
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+		<!--  <Import Project="$(SolutionDir)\.nuget\nuget.targets" /> !-->
   <ItemGroup>
     <Compile Include="TestBase.fs" />
     <Compile Include="TagParserTest.fs" />
@@ -70,10 +70,14 @@
       <HintPath>..\..\src\packages\FParsec-Big-Data-Edition.1.0.1\lib\net45\FParsecCS.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <!--<Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </Reference> !-->
+	    <!--    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"> 
+	    </Reference> !-->
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework.Updated">
+            <HintPath>../packages/Microsoft.VisualStudio.QualityTools.UnitTestFramework.Updated.15.0.26228/lib/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>     
     <Reference Include="System" />
     <ProjectReference Include="..\..\src\pgn.Data\pgn.Data.csproj">
       <Name>pgn.Data</Name>

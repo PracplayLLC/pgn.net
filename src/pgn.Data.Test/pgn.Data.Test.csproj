@@ -93,10 +93,15 @@
         </Reference>
       </ItemGroup>
     </When>
-  </Choose>
+    </Choose>
+    <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework.Updated">
+	    <HintPath>../packages/Microsoft.VisualStudio.QualityTools.UnitTestFramework.Updated.15.0.26228/lib/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+		  <!--  <Import Project="$(SolutionDir)\.nuget\nuget.targets" /> !-->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
