@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>ilf.pgn.PgnParsers</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <LangVersion>4.6</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="MoveParsers.fs" />
+      <Compile Include="TagParsers.fs" />
+      <Content Include="pgn.Parse.fsproj" />
+      <Compile Include="FenTagParser.fs" />
+      <Compile Include="PgnTags.fs" />
+      <Compile Include="MoveSeriesParsers.fs" />
+      <Compile Include="Parser.fs" />
+      <Compile Include="BasicParsers.fs" />
+      <Compile Include="BasicChessParsers.fs" />
+      <Compile Include="DateTagParser.fs" />
+      <Compile Include="Bootstrap.fs" />
+      <Compile Include="GameParsers.fs" />
+      <Compile Remove="AssemblyInfo.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\pgn.Data\pgndata-core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Remove="FSharp.Core" />
+      <PackageReference Include="FParsec" Version="1.1.1" />
+      <PackageReference Include="System.Reflection" Version="4.3.0" />
+      <PackageReference Update="NETStandard.Library" Version="2.0.0" />
+    </ItemGroup>
+
+</Project>

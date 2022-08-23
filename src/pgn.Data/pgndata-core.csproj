@@ -1,9 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <TargetFrameworks>netstandard2.0</TargetFrameworks>
+	  <RootNamespace>ilf.pgn.Data</RootNamespace>
   </PropertyGroup>
  <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Deterministic>false</Deterministic>
   </PropertyGroup>
+ <ItemGroup>
+   <Compile Remove="Properties\**" />
+ </ItemGroup>
+ <ItemGroup>
+   <EmbeddedResource Remove="Properties\**" />
+ </ItemGroup>
+ <ItemGroup>
+   <None Remove="Properties\**" />
+ </ItemGroup>
 </Project>

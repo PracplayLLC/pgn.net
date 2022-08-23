@@ -44,7 +44,7 @@ let pTarget =
     |>> fun ((piece, file), rank) ->  MoveInfo(Some(piece), Some(file), Some(rank))
     <!> "pTarget"
 
-// origin squalre of move (usually for disambiguation)
+// origin square of move (usually for disambiguation)
 let pOrigin = 
     attempt(pPiece .>>. opt pFile .>>. opt pRank)
     <|> (pFile .>>. opt pRank |>> fun(f, r) -> ((PieceType.Pawn , Some f),r))
